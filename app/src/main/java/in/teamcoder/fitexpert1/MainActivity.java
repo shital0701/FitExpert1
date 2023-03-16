@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,85 +53,52 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main,menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.id_privacy){
+        if (id == R.id.home){
 
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
-
-            return true;
+            finish();
         }
 
-        if (id == R.id.id_term){
+        else if (id == R.id.menu_refresh){
+            startActivity(getIntent());
+            finish();
+            overridePendingTransition(0,0);
+        }
 
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+        else if (id == R.id.id_myprofile){
+
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
             startActivity(intent);
-
-            return true;
+            finish();
         }
 
-        if (id == R.id.id_dashboard){
+        else if (id == R.id.id_myplans){
 
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
-
-            return true;
+            finish();
         }
 
-        if (id == R.id.id_myplan){
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+        else if (id == R.id.id_logout){
+
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-
-            return true;
+            finish();
+        }else{
+            Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
         }
 
-        if (id == R.id.rate){
-
-            try {
-
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
 
 
-            } catch (Exception ex){
-
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details>id=" + getPackageName())));
-
-
-            }
-
-            return true;
-        }
-
-        if (id == R.id.more){
-
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Leap+Fitness+Group"));
-            startActivity(intent);
-
-            return true;
-        }
-
-        if (id == R.id.share){
-
-            Intent myIntent = new Intent(Intent.ACTION_SEND);
-            myIntent.setType("text/plain");
-            String sharebody = "This is the best for yoga \n By this app you can stretch your body \n This is free Downlaod Now \n" + "https://play.google.com/store/apps/details>id=in.teamcoder.fitexpert1&h1=en";
-            String sharehub = "FitExpert";
-            myIntent.putExtra(Intent.EXTRA_SUBJECT, sharehub);
-            myIntent.putExtra(Intent.EXTRA_TEXT, sharebody);
-            startActivity(Intent.createChooser(myIntent, "share using"));
-
-
-
-
-            return true;
-        }
-
-        return  true;
+        return super.onOptionsItemSelected(item);
     }
 
     public void beforeage18(View view) {

@@ -1,48 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-
     <item
-        android:title="Privacy Policy"
-        android:id="@+id/id_privacy"
-        android:orderInCategory="100"
+        android:title="home"
+        android:id="@+id/home"
+
+        />
+    <item
+        android:title="Refesh"
+        android:id="@+id/menu_refresh"
+
         />
 
     <item
-        android:title="Terms and Condition"
-        android:id="@+id/id_term"
-        android:orderInCategory="101"
+        android:title="My Profile"
+        android:id="@+id/id_myprofile"
+
+    />
+
+    <item
+        android:title="Plans"
+        android:id="@+id/id_myplans"
+
         />
 
     <item
-        android:title="Dashboard"
-        android:id="@+id/id_dashboard"
-        android:orderInCategory="102"
-        />
-
-    <item
-        android:title="My plans"
-        android:id="@+id/id_myplan"
+        android:title="Logout"
+        android:id="@+id/id_logout"
         android:orderInCategory="103"
         />
 
 
-    <item
-        android:title="Rate Us"
-        android:id="@+id/rate"
-        android:orderInCategory="104"
-        />
 
-    <item
-        android:title="More Apps"
-        android:id="@+id/more"
-        android:orderInCategory="105"
-        />
 
-    <item
-        android:title="Share"
-        android:id="@+id/share"
-        android:orderInCategory="106"
-        />
+
+
+
 
 </menu>
