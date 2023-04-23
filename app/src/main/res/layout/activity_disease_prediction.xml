@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Disease_prediction"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_700"
+        android:textAlignment="textEnd"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="FitExpert"
+        app:titleTextColor="#FFF"
+        android:gravity="end" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="Disease Prection"
+                android:textColor="#ff000000"
+                android:textSize="30.0dp"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Symptom"
+                android:id="@+id/symptom1"
+                android:layout_marginTop="20dp"
+                tools:ignore="TouchTargetSizeCheck"
+                >
+
+            </EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Symptom"
+                android:id="@+id/symptom2"
+                android:layout_marginTop="20dp"
+                tools:ignore="TouchTargetSizeCheck"
+                ></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Symptom"
+                android:id="@+id/symptom3"
+                android:layout_marginTop="20dp"
+                tools:ignore="TouchTargetSizeCheck"
+                ></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Symptom"
+                android:id="@+id/symptom4"
+                android:layout_marginTop="20dp"
+                tools:ignore="TouchTargetSizeCheck"
+                ></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Symptom"
+                android:id="@+id/symptom5"
+                android:layout_marginTop="20dp"
+                tools:ignore="TouchTargetSizeCheck"
+                ></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Symptom"
+                android:id="@+id/symptom6"
+                android:layout_marginTop="20dp"
+                tools:ignore="TouchTargetSizeCheck"
+                ></EditText>
+
+            <Button
+                android:id="@+id/predict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_bg"
+                android:text="Predict"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                android:layout_marginLeft="08dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="50dp"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:id="@+id/result"
+                ></TextView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

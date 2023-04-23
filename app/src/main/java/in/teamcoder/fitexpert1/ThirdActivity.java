@@ -1,5 +1,7 @@
 package in.teamcoder.fitexpert1;
 
+import static in.teamcoder.fitexpert1.R.*;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -22,7 +24,7 @@ public class ThirdActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_third);
+//        setContentView(layout.activity_third);
 
 
         Intent intent = getIntent();
@@ -35,49 +37,49 @@ public class ThirdActivity extends AppCompatActivity {
 
 
             case 1:
-                setContentView(R.layout.activity_bow);
+                setContentView(layout.activity_bow);
                 break;
             case 2:
-                setContentView(R.layout.activity_bridge);
+                setContentView(layout.activity_bridge);
                 break;
             case 3:
-                setContentView(R.layout.activity_chair);
+                setContentView(layout.activity_chair);
                 break;
             case 4:
-                setContentView(R.layout.activity_child);
+                setContentView(layout.activity_child);
                 break;
             case 5:
-                setContentView(R.layout.activity_cobler);
+                setContentView(layout.activity_cobler);
                 break;
             case 6:
-                setContentView(R.layout.activity_cow);
+                setContentView(layout.activity_cow);
                 break;
             case 7:
-                setContentView(R.layout.activity_playji);
+                setContentView(layout.activity_playji);
                 break;
             case 8:
-                setContentView(R.layout.activity_pauseji);
+                setContentView(layout.activity_pauseji);
                 break;
             case 9:
-                setContentView(R.layout.activity_plank);
+                setContentView(layout.activity_plank);
                 break;
             case 10:
-                setContentView(R.layout.activity_crunches);
+                setContentView(layout.activity_crunches);
                 break;
             case 11:
-                setContentView(R.layout.activity_situp);
+                setContentView(layout.activity_situp);
                 break;
             case 12:
-                setContentView(R.layout.activity_rotation);
+                setContentView(layout.activity_rotation);
                 break;
             case 13:
-                setContentView(R.layout.activity_twist);
+                setContentView(layout.activity_twist);
                 break;
             case 14:
-                setContentView(R.layout.activity_windmill);
+                setContentView(layout.activity_windmill);
                 break;
             case 15:
-                setContentView(R.layout.activity_legup);
+                setContentView(layout.activity_legup);
                 break;
         }
 

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">FitExpert1</string>
+    <string name="select">Select Item</string>
 
 
     <string name="pose1">    Step 1:- Start in the push-up position with your arms completely straight and directly beneath your shoulders.\n\n
